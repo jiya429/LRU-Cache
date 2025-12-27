@@ -1,29 +1,20 @@
-cpp-lru-cache
-=============
+# LRU-Cache
 
-Simple and reliable LRU (Least Recently Used) cache for c++ based on hashmap and linkedlist. The library is header only, simple test and example are included.
-It includes standard components and very little own logics that guarantees reliability.
+An efficient implementation of **LRU (Least Recently Used) Cache** in **C++**
+using `unordered_map` and a doubly linked list.
 
-Example:
+## Features
+- O(1) get and put operations
+- Automatic eviction of least recently used entries
+- Clean STL-based design
+- Easy-to-integrate header-only cache
 
-```
-/**Creates cache with maximum size of three. When the 
-   size in achieved every next element will replace the 
-   least recently used one */
-cache::lru_cache<std::string, std::string> cache(3);
+## Technologies Used
+- C++
+- STL (`unordered_map`, `list`)
 
-cache.put("one", "one");
-cache.put("two", "two");
+## Use Case
+Ideal for memory caching, database indexing, and system design problems.
 
-const std::string& from_cache = cache.get("two")
-
-```
-
-How to run tests:
-
-```
-mkdir build
-cd build
-cmake ..
-make check
-```
+## Author
+Jiya Chaudhary
